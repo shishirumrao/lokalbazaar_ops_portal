@@ -1,0 +1,7 @@
+{
+  "name": "Ofity Operations Portal",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
