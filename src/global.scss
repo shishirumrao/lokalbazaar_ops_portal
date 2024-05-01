@@ -24,3 +24,42 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Custom */
+@import "theme/ionic.scss";
+@import "theme/text.scss";
+@import "theme/margin.scss";
+@import "theme/display.scss";
+
+body {
+    line-height: 1.5;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+    -moz-tab-size: 4;
+    /* 3 */
+    -o-tab-size: 4;
+    tab-size: 4;
+    /* 3 */
+    font-family: Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* 4 */
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    /* 5 */
+    font-variation-settings: normal;
+    /* 6 */
+}
+
+a {
+    text-decoration: none;
+}
+
+.elevation-0 {
+    box-shadow: none;
+}
+
+.h_full {
+    height: 100%;
+}

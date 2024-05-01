@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+    production: false,
+    base_url: 'http://ofity.in:8080/ofity',
+    logo_full: '../assets/icon/ofity_full.svg',
+    logo_small: '../assets/icon/ofity_small.svg',
+    logo_small_inv: '../assets/icon/ofity_logo_inverted.svg'
 };
 
 /*

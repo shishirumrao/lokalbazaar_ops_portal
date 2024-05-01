@@ -1,0 +1,60 @@
+<ion-content [fullscreen]="true"
+             class="ion-padding">
+    <ion-grid fixed
+              class="h_full">
+        <ion-row class="ion-align-items-center h_full">
+            <ion-col size="12">
+                <ion-row class="ion-text-center mb-24">
+                    <ion-col>
+                        <img alt="Ofity"
+                             [src]="env.logo_small" />
+                        <h1 class="tracking-tight font-bold text-2xl">Sign in to your account</h1>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="ion-text-center">
+                    <ion-col size-xs="12"
+                             size-md="4"
+                             offset-md="4">
+                        <form [formGroup]="signInForm"
+                              #signInNgForm="ngForm">
+                            <ion-input label="Email"
+                                       label-placement="floating"
+                                       fill="outline"
+                                       [formControlName]="'username'"
+                                       class="mb-16 ion-text-left text-sm"></ion-input>
+                            <ion-input label="Password"
+                                       label-placement="floating"
+                                       fill="outline"
+                                       type="password"
+                                       [formControlName]="'password'"
+                                       class="mb-24 ion-text-left text-sm"></ion-input>
+                            <ion-button expand="block"
+                                        class="capitalize font-semibold mb-24"
+                                        [disabled]="signInForm.disabled || signInForm.invalid"
+                                        (click)="authenticate()"
+                                        mode="ios">
+                                <span *ngIf="!signInForm.disabled"
+                                      class="d-flex ion-align-items-center">
+                                    <span>Sign In</span>
+                                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                                </span>
+                                <ion-spinner *ngIf="signInForm.disabled"
+                                             color="light"
+                                             name="crescent"></ion-spinner>
+                            </ion-button>
+                        </form>
+                        <ion-text class="text-sm">
+                            Forgot Password?
+                            <a href="#"
+                               class="d-i-flex ion-align-items-center font-semibold">
+                                <span>Reset</span>
+                                <ion-icon name="chevron-forward-outline"
+                                          class="font-semibold"></ion-icon>
+                            </a>
+                        </ion-text>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
